@@ -1,0 +1,138 @@
+body {
+    background-color: rgb(114, 8, 114);
+}
+
+nav {
+    background-color: rgb(66, 8, 66);
+    text-align: center;
+    color: white;
+    height: 50px;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+.contenedor {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.grosor {
+    display: block;
+}
+
+.cont {
+    display: flex;
+
+}
+
+.contenedor-general {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.filtros {
+    margin-left: 10vh;
+
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    margin-bottom: 5vh;
+}
+
+.img {
+
+    margin-right: 20px;
+}
+
+.img input {
+    margin-bottom: 20px;
+}
+
+.brillo {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+p {
+    margin: 0;
+    padding-left: 50px;
+    color: white;
+}
+
+.contendor-dibujar p {
+    padding-left: 20px;
+}
+
+.dibujar {
+    display: flex;
+}
+
+.grosorLapiz {
+    margin-left: 35px;
+}
+
+.contendor-dibujar {
+    margin-bottom: 10vh;
+}
+
+.buttonDisabled {
+    background-color: rgb(146, 147, 147);
+}
+
+/* button */
+
+button {
+    margin-bottom: 10px;
+    align-items: center; 
+    background-color: #e188e6;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    font-size: 16px;
+    height: 48px; 
+    line-height: 24px;
+    position: relative;
+}
+
+button:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+button:hover:after {
+    transform: translate(0, 0);
+}
+
+button:active {
+    background-color: #e188e6;
+    outline: 0;
+}
+
+button:hover {
+    outline: 0;
+}
+
+@media (min-width: 768px) {
+    button {
+        padding: 0 40px;
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="main()">
+    <nav>
+        <h2>Paint Trabajo Entregable 3</h2>
+    </nav>
+
+    <div class="contenedor-general">
+        <div class="contenedor">
+            <div class="contendor-dibujar">
+                <h3>Dibujar</h3>
+                <div class="dibujar">
+                    <div>
+                        <button id="pen">Lapiz</button>
+                        <input type="color" id="color" oninput="colorlapiz(this.value)" style="height: 30px;">
+                    </div>
+                    <div class="grosorLapiz">
+                        <p>Grosor Lapiz</p>
+                        <input type="range" id="grosor" oninput="grosorlinea(this.value)" min="1" max="5" value="1">
+                    </div>
+                </div>
+                <br>
+                <button id="borrador">Borrar</button>
+
+            </div>
+
+            <div class="img">
+                <h3>Cargar Imagen</h3>
+                <input type="file" id="file" class="file">
+                <br>
+                <button id="save">Guardar Imagen</button>
+                <button id="resetCanvas">Reset</button>
+
+            </div>
+        </div>
+
+
+        <div class="cont">
+
+            <div>
+                <canvas id="canvas" width="600" height="650"></canvas>
+            </div>
+            <div class="filtros">
+                <h3>Filtros para Imagenes</h3>
+                <div class="outer-buttons">
+
+
+                    <button id="negativo" class="buttonFiltro">Negativo</button>
+                    <button id="sepia" class="buttonFiltro">Sepia</button>
+                    <br>
+                    <button id="byn" class="buttonFiltro">Gris</button>
+                    <button id="saturacion" class="buttonFiltro">Saturacion</button>
+                    <br>
+                    <button id="blur" class="buttonFiltro">Blur</button>
+                    <button id="detencion-bordes" class="buttonFiltro">Detencion Bordes</button>
+                    <br>
+                    <button id="binarizacion" class="buttonFiltro">Binarizacion</button>
+                    <div class="brillo">
+                        <p>Brillo</p>
+                        <input type="range" id="brillo" min="-10" max="10" value="0" class="buttonFiltro">
+                    </div>
+                    <br>
+                    <button id="resetImg" class="buttonFiltro">Borrar filtros</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/pen.js"></script>
+    <script src="js/Imagen.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
